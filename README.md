@@ -1,4 +1,4 @@
-#🤖 ML AUTOMATION 🤖
+# 🤖 ML AUTOMATION 🤖
 ## Overview
 
 Our ML Automation website  involves building a platform that automates various stages of the machine learning pipeline. Our goal is to simplify the process of model development, training, and deployment by automating repetitive tasks and providing an intuitive interface for users without extensive machine learning expertise.
