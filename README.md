@@ -1,4 +1,4 @@
-# ML AUTOMATION
+# ML AUTOMATION 🤖🤖
 ## Overview
 
 The application allows users to upload a CSV dataset, preprocess it, select a target variable, choose a task type (classification or regression), and then build and compare machine learning models using PyCaret library.
