@@ -1,0 +1,9 @@
+pycaret
+streamlit
+scikit-learn
+ydata-profiling
+streamlit-pandas-profiling
+pandas
+numpy
+deta
+python-dotenv

@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-# from DataPreProcessing import preprocess_data
+from DataPreProcessing import preprocess_data
 from Datasets import Datasets
 from Model import ModelTrainer
 from Visualization import Visualization
