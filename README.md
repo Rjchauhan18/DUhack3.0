@@ -1,18 +1,21 @@
-# ML AUTOMATION 🤖🤖
+#🤖 ML AUTOMATION 🤖
 ## Overview
 
-The application allows users to upload a CSV dataset, preprocess it, select a target variable, choose a task type (classification or regression), and then build and compare machine learning models using PyCaret library.
+Our ML Automation website  involves building a platform that automates various stages of the machine learning pipeline. Our goal is to simplify the process of model development, training, and deployment by automating repetitive tasks and providing an intuitive interface for users without extensive machine learning expertise.
 
 ## Features: -
 - Upload Dataset: Users can upload a CSV file containing their dataset.
 - Data Preprocessing: Missing values are handled using SimpleImputer, and categorical variables are encoded using OneHotEncoder.
 - Model Selection/Specification: Users can select the target variable and choose between classification or regression tasks.
-- Visualization of Models: Model comparison metrics are displayed to help users make informed decisions.
+- Visualization of Models: Exploratory Data Analytics(EDA) of the dataset using pandas profiling
 - Download Model: Functionality to download trained models for later use.
 
 
 ## Dependencies: -
 - Streamlit
 - Pandas
+- numpy
 - Scikit-learn
 - PyCaret
+- ydata_profiling
+- streamlit_pandas_profiling
