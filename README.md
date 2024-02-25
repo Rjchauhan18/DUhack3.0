@@ -26,10 +26,30 @@
 - PyCaret
 - ydata_profiling
 - streamlit_pandas_profiling
+- streamli-authenticator
+- streamlit-lottie
 
-## Run : -
+## SetUp : -
+1. Clone The Github repo :
+```
 
-1. git clone https://github.com/Rjchauhan18/DUhack3.0.git
-2. pip install -r requirements.txt
-3. streamlit run app.py
+git clone https://github.com/Rjchauhan18/DUhack3.0.git
+
+```
+
+2. Navigate to Downloaded folder :
+``` 
+cd DUhack3.0
+```
+
+3. Install all the requirements for the project :
+
+``` 
+pip install -r requirements.txt 
+```
+
+4. Run the app using following command :
+```
+ streamlit run Home.py
+```
 
