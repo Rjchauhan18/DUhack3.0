@@ -1,27 +1,35 @@
 # 🤖 AutoCraftML 🤖
 ## Overview
 
-Our `ML Automation` website  involves building a platform that automates various stages of the machine learning pipeline. Our goal is to simplify the process of model development, training, and deployment by automating repetitive tasks and providing an intuitive interface for users without extensive machine learning expertise.
+`AutoCraftML` is a machine learning automation platform designed to streamline the entire machine learning pipeline. From data preprocessing to model training and visualization, AutoCraftML automates repetitive tasks, enabling users to develop and deploy machine learning models with ease. Leveraging intuitive interfaces and powerful libraries, it caters to users across various domains, simplifying the complexities of AI and machine learning.
 
 ## Domains: -
 - Artificial Intelligence and Machine Learning
-- Web Devlopment
+- Web Development
 - Education
 - Open Innovation
 
 ## Features: -
-- `Upload Dataset:` Users can upload a CSV file containing their dataset.
+- `Dataset:` Users can upload a CSV file containing their dataset.
 - `Data Preprocessing:` Missing values are handled using SimpleImputer, and categorical variables are encoded using OneHotEncoder.
 - `Model Training:` Users can select the target variable and choose between classification or regression tasks.
-- `Visualization of Models:` Exploratory Data Analytics(EDA) of the dataset using pandas profiling
+- `Data Visualization:` Exploratory Data Analytics(EDA) of the dataset using pandas profiling
+- `Model Visualization:` Visualization of Different Machine Learning Models
 - `Download Model:` Functionality to download trained models for later use.
-
 
 ## Dependencies: -
 - Streamlit
 - Pandas
-- numpy
+- deta
+- python-dotenv
 - Scikit-learn
 - PyCaret
 - ydata_profiling
 - streamlit_pandas_profiling
+
+## Run : -
+
+1. git clone https://github.com/Rjchauhan18/DUhack3.0.git
+2. pip install -r requirements.txt
+3. streamlit run app.py
+
