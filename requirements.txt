@@ -1,4 +1,4 @@
-pycaret
+pycaret==3.3.0
 streamlit
 scikit-learn
 ydata-profiling
@@ -7,3 +7,5 @@ pandas
 numpy
 deta
 python-dotenv
+streamlit-authenticator== 0.3.1
+
