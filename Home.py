@@ -1,18 +1,46 @@
 import streamlit as st
 import pandas as pd
-from DataPreProcessing import preprocess_data
+import json
+from Data_Pre_Processing import preprocess_data
 from Datasets import Datasets
 from Model import ModelTrainer
 from Visualization import Visualization
-
-# Database Connectivity Modelus
+from streamlit_lottie import st_lottie
+import requests
+# Database Connectivity Modules
 import streamlit_authenticator as stauth  
 import database as db
 
 
 
 # Set page title and favicon
-st.set_page_config(page_title="Machine Learning Automation", page_icon=":robot:")
+st.set_page_config(
+    page_title="Auto Craft Ml",
+    page_icon="🤖",
+    layout="wide",
+    
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+# st.set_page_config(page_title="AutoCraftMl", page_icon=":robot:")
+
+#function for lottie animation using request 
+def load_lottie_url(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return json.loads(r.text)
+
+def load_lottie_file(file_path: str):
+    with open(file_path, "r") as file:
+        return json.load(file)
+
+
+
+
 
 # --- USER AUTHENTICATION ---
 i=0
@@ -91,18 +119,21 @@ if authentication_status:
     placeholder.empty()
 
     # Title of the application
-    st.title('Machine Learning Automation')
+    st.title('🤖Machine Learning Automation')
+    # lottie_hi=load_lottie_url('https://app.lottiefiles.com/share/aa673afc-ab71-4a85-b7da-c17a10e3366d')
+    # st_lottie(lottie_hi)
 
     # Load dataset
     with st.sidebar:
+        st.write("# Welcome , ")
+        st.title(f'{name}👋')
+        hi_lottie=load_lottie_file('/home/rahul/Desktop/DUhack3.0/DUhack3.0/lottie_animation/App__sidebar_logo.json')
+        st_lottie(hi_lottie)
 
-        st.write(f"Welcome {name}")
+
+        select = st.selectbox("Machine Learning Menu", ['Dataset','Dataset Report', 'Data Preprocessing',
+                                        'Model Training'])
         authenticator.logout("Logout", "sidebar")
-
-        st.sidebar.title("Machine Learning Menu")
-        st.sidebar.info("Select an option from below:")
-        select = st.selectbox("", ['Dataset', 'Data Preprocessing',
-                                        'Model Training', 'Visualization of Models'])
 
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
@@ -125,9 +156,9 @@ if authentication_status:
             preprocess_data(data)
 
     if select == "Datasets":
-        # TODO: Datasets
+        # : Datasets
         Datasets()
 
     if select == "Visualization of Models":
-        # TODO: Visualization of models
+        # : Visualization of models
         Visualization(data)
