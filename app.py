@@ -8,7 +8,7 @@ from Visualization import Visualization
 # Database Connectivity Modelus
 import streamlit_authenticator as stauth  
 import database as db
-from upload_to_database import register
+
 
 
 # Set page title and favicon
@@ -61,7 +61,7 @@ def registration():
                 # Save user registration details to database
                 try:
                     # db.save_user(username, name, password, email)
-                    register(username, name, password, email)
+                    db.register(username, name, password, email)
                     st.success('SignUp successful! Please login to access the application.')
                 except Exception as e:
                     st.error(f"Error: {e}")

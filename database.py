@@ -1,7 +1,8 @@
 import os
 
-from deta import Deta  # pip install deta
-from dotenv import load_dotenv  # pip install python-dotenv
+from deta import Deta  
+from dotenv import load_dotenv  
+import streamlit_authenticator as stauth
 
 
 # Load the environment variables
@@ -39,3 +40,28 @@ def update_user(username, updates):
 def delete_user(username):
     """Always returns None, even if the key does not exist"""
     return db.delete(username)
+
+
+
+
+def register(username, name, password,email):
+    """Returns the user on a successful user creation, otherwise raises and error"""
+    usernames = []
+    names = []
+    passwords = []
+    emails = []
+
+    # append user data
+    usernames.append(username)
+    names.append(name)
+    passwords.append(password)
+    emails.append(email)
+
+    # convert password to hash password
+    hashed_passwords = stauth.Hasher(passwords).generate()
+
+
+    for (username, name, hash_password,email) in zip(usernames, names, hashed_passwords,emails):
+        # db.insert_user(username, name, hash_password)
+        insert_user(username, name, hash_password,email)
+    
