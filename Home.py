@@ -127,7 +127,7 @@ if authentication_status:
     with st.sidebar:
         st.write("# Welcome , ")
         st.title(f'{name}👋')
-        hi_lottie=load_lottie_file('/home/rahul/Desktop/DUhack3.0/DUhack3.0/lottie_animation/App__sidebar_logo.json')
+        hi_lottie=load_lottie_url('https://lottie.host/e6955980-5d56-47c9-bce7-d9e3c23cd4ad/klr4BX3r9u.json')
         st_lottie(hi_lottie)
 
 
